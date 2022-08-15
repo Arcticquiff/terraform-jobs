@@ -11,7 +11,7 @@ LABEL version="0.0.1"
 ENV AWSCLI_VERSION='1.18.14'
 
 RUN pip install --quiet --no-cache-dir awscli==${AWSCLI_VERSION}
-RUN pip install --dev terraform-bin
+RUN pip install terraform-bin
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
